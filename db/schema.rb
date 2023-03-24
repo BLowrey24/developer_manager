@@ -18,16 +18,17 @@ ActiveRecord::Schema.define(version: 2023_03_23_011424) do
   create_table "developers", force: :cascade do |t|
     t.string "name"
     t.string "location"
+    t.integer "num_awards"
+    t.boolean "still_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "video_games", force: :cascade do |t|
-    t.integer "game_id"
     t.string "name"
     t.string "price"
-    t.datetime "release_date"
     t.boolean "up_to_date"
+    t.integer "dlc"
     t.string "genre"
     t.bigint "developer_id"
     t.datetime "created_at", null: false
