@@ -1,6 +1,6 @@
 <h1>Video Games Index Page</h1>
 <% @video_games.each do |video_game| %>
-  <h3><%= "Name: #{video_game.name} "%></h3>
+  <h3><%= video_game.name %></h3>
   <p><%= "Price: #{video_game.price} " %></p>
   <p><%= "Up to date: #{video_game.up_to_date}" %></p>
   <p><%= "DLC's: #{video_game.dlc}" %></p>
