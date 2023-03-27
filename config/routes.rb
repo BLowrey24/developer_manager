@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/developers", to: "developers#index"
   get "/developers/:id", to: "developers#show"
   get "/video_games", to: "video_games#index"
+  get "/video_games/:id", to: "video_games#show"
 end
 
 # 5 verbs: get, post, patch/put, delete

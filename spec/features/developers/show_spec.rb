@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe '/developers/:id' do
   let!(:bungie) { Developer.create!(name: "Bungie", location: "Bellevue, Washington", num_awards: 3, still_active: true ) }
   let!(:sie) { Developer.create!(name: "Sony Interactive Entertainment", location: "San Mateo, California", num_awards: 5, still_active: false) }
-  it 'displays the devloper title and attributes' do
+  it 'displays the devloper name and its attributes' do
 
     visit "/developers/#{bungie.id}"
-    save_and_open_page
+    # save_and_open_page
 
     expect(page).to have_content(bungie.name)
     expect(page).to have_content("Located: #{bungie.location}")
@@ -18,6 +18,5 @@ RSpec.describe '/developers/:id' do
     expect(page).to_not have_content(sie.location)
     expect(page).to_not have_content(sie.num_awards)
     expect(page).to_not have_content(sie.still_active)
-
   end
 end
