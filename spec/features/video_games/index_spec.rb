@@ -10,7 +10,7 @@ RSpec.describe "/video_games", type: :feature do
     it "I see each video_game and their attributes" do
 
       visit "/video_games"
-      save_and_open_page
+      # save_and_open_page
 
       expect(page).to have_content("Video Games Index Page")
       expect(page).to have_content(destiny.name)
