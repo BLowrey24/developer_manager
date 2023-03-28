@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get "/developers/:id", to: "developers#show"
   get "/video_games", to: "video_games#index"
   get "/video_games/:id", to: "video_games#show"
-  get "/developers/:developer_id/video_games", to: "developer_video_games#index"
+  get "/developers/:id/video_games", to: "developer_video_games#index"
 end

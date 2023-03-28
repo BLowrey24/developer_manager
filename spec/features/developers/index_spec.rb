@@ -9,23 +9,11 @@ RSpec.describe "/developers (developer index page)", type: :feature do
       # bungie = Developer.create!(name: 'Bungie', location: 'Bellevue, Washington' )
       # nintendo = Developer.create!(name: 'Nintendo', location: 'Redmond, WA' )
       visit "/developers"
-      save_and_open_page
+      # save_and_open_page
 
       expect(page).to have_content("Developer Index")
       expect(page).to have_content(bungie.name)
       expect(page).to have_content(nintendo.name)
-    end
-  end
-  # user story 5
-  describe 'As a visitor When I visit /parents/:parent_id/child_table_name
-  Then I see each Child that is associated with that Parent with each Childs attributes' do
-    it 'I see the devloper name and the video games associated with that developer
-    with its attributes' do
-
-      visit "/devlopers/#{destiny.id}/video_games"
-      save_and_open_page
-
-      
     end
   end
 end

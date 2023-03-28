@@ -3,3 +3,5 @@
 <p><%= "Located: #{@developer.location}" %></p>
 <p><%= "Number of awards: #{@developer.num_awards}" %></p>
 <p><%= "Still active: #{@developer.still_active}" %></p>
+<p><%= "Number of games made: #{@developer.game_count}" %></p>
+<%= link_to "All games for #{@developer.name}", "/developers/#{@developer.id}/video_games" %>
