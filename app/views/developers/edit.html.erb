@@ -1,0 +1,16 @@
+<h1>Developer Edit Page</h1>
+<%= form_with url: "/developers/#{@developer.id}", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :location %>
+  <%= form.text_field :location %>
+  <br>
+  <%= form.label :num_awards %>
+  <%= form.number_field :num_awards %>
+  <br>
+  <%= form.label :still_active %>
+  <%= form.check_box :still_active %>
+  <br>
+  <%= form.submit "Update Developer" %>
+<% end %>

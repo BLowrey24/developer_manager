@@ -5,3 +5,4 @@
 <p><%= "Still active: #{@developer.still_active}" %></p>
 <p><%= "Number of games made: #{@developer.game_count}" %></p>
 <%= link_to "All games for #{@developer.name}", "/developers/#{@developer.id}/video_games" %>
+<%= link_to "Update #{@developer.name}", "/developers/#{@developer.id}/edit" %>
